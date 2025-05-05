@@ -7,6 +7,8 @@ import Constants from "../Constants";
 import SecondaryCTAButton from "./SecondaryCTAButton";
 import Img from "gatsby-image";
 import {graphql, useStaticQuery} from 'gatsby';
+import StyledButton from './atom/StyledButton'
+import Button from './Button'
 
 let subtitle = function (text) {
   return <p
@@ -81,7 +83,9 @@ export default function LandingPageHero() {
           {subtitle("Designed to work for all sectors")}
           {subtitle("Health, Education, Sanitation, Water, Waste, Agriculture, Social Security.")}
           <div style={{paddingTop: '1rem', flexDirection: 'column', display: 'flex', alignItems: 'center'}}>
-            <SecondaryCTAButton text="Try for free" link={`/signup?${Constants.ContactSource}=${Constants.Trial}`}/>
+            {/* <SecondaryCTAButton text="Try for free" link={`/signup?${Constants.ContactSource}=${Constants.Trial}`}/> */}
+            <Button variant={'primary'}>Hello</Button>
+            <StyledButton>Try For Free</StyledButton>
             <p className="button is-primary is-medium" style={{marginTop: 10}}>
               <PopupText
                 text="Schedule a Demo"
